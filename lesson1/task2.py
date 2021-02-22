@@ -5,9 +5,10 @@
 Программа должна спрашивать числа у пользователя до тех пор, пока он не введет "0".
 """
 
-num = int(input('Привет! Давай посчитаем сумму твоих цифр? Просто введи любое число'))
-total = 0
-while text != 0:
-    total += text
-    text = input()
-print('Сумма чисел равна', total)
+total = int(input('Привет! Давай посчитаем сумму твоих цифр? Просто введи любое число\n'))
+while total != 0:
+    first = total % 10
+    second = (total % 100) // 10
+    third = total // 100
+    print('Сумма числа равна:', first + second + third)
+    total = int(input())
